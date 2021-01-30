@@ -11,4 +11,4 @@
 ## Currently..
 
 #### migrating from Evernote to Notion manually
-> Official Notion Dev is still fixing on auto-migration of Evernote
+> Official Notion Dev is still fixing error on auto-migration of Evernote
