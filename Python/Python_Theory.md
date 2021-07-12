@@ -18,3 +18,7 @@ List - mutable sequence '[]'
 Tuple - immutable sequence '()'
 
 Dictionary - mutable '{}'
+
+### is vs ==
+
+The == operator compares the value or equality of two objects, whereas the Python is operator checks whether two variables point to the same object in memory. In the vast majority of cases, this means you should use the equality operators == and !=, except when you’re comparing to None.
