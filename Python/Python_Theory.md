@@ -1,4 +1,4 @@
-### Data Types
+## Data Types
 
 1. number 1,2,3...(int)
 2. str 'like this' "like that"
@@ -11,7 +11,7 @@ print(type(a_float)) // class 'float'
 
 Convention = super_long_variables : snake case
 
-### Sequence
+## Sequence
 
 List - mutable sequence '[]'
 
@@ -19,13 +19,14 @@ Tuple - immutable sequence '()'
 
 Dictionary - mutable '{}'
 
-### is vs ==
+## is vs ==
 
 The == operator compares the value or equality of two objects, whereas the Python is operator checks whether two variables point to the same object in memory. In the vast majority of cases, this means you should use the equality operators == and !=, except when you’re comparing to None.
 
-### args
+## args
 
 Positional Argument: infinity(*args)
+
 Keyword Argument: ("" = ' ') / infinity(**kwargs)
 
 ```python
@@ -38,7 +39,7 @@ def infinity_plus(*args):
 infinity_plus(1,5,54,8,48,646,1,1,654,81,5,4,8748,4)
 ```
 
-### class
+## class
 
 * Methods = Function inside the class
 * In Python, All Function must have 1 argument
@@ -48,3 +49,4 @@ infinity_plus(1,5,54,8,48,646,1,1,654,81,5,4,8748,4)
 ```python
 porche.start(porche) === def start(self):
 ```
+
