@@ -50,3 +50,9 @@ infinity_plus(1,5,54,8,48,646,1,1,654,81,5,4,8748,4)
 porche.start(porche) === def start(self):
 ```
 
+## class inherit
+
+inherit = extend: Extending on existing class
+
+if you plus one more thing in __init__ keeping everything, you have to use 'super'function
+-> this is calling upper(parents) class.
