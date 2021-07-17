@@ -51,3 +51,12 @@ console.log(bar); // false
 
 const baz = 0 ?? 12;
 console.log(baz); // 0
+
+//Triple-slash directive
+/// <reference path="./lodash.d.ts" />
+
+// OR 'npm i -D @types/lodash'
+
+import * as _ from 'lodash';
+
+console.log(_.camelCase('import lodash module'));
