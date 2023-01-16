@@ -1,7 +1,7 @@
 from linked_list import Linked_list
 
 
-def merge_sort(linked_list):
+def merge_sort(linked_list: Linked_list):
     """
     Sorts a linked list in ascending order
     - Recursively divide the linked list into sublists containing a single node
@@ -22,7 +22,7 @@ def merge_sort(linked_list):
     return merge(left, right)
 
 
-def split(linked_list):
+def split(linked_list: Linked_list):
     """
     Divide the unsorted list at midpoint into sublists
     """
@@ -46,7 +46,7 @@ def split(linked_list):
         return left_half, right_half
 
 
-def merge(left, right):
+def merge(left: Linked_list, right: Linked_list):
     """
     Merges two linked lists, sorting by data in nodes.
     Returns a new merged list.
