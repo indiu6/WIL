@@ -10,7 +10,7 @@ class Node:
 @dataclass
 class Linked_list:
     """
-    Singly linked list
+    Singly linked list, made using dataclass
     """
 
     head: Node = None
@@ -32,7 +32,7 @@ class Linked_list:
 
     def add(self, data):
         """
-        Adds new Node containing data at head of the list
+        Adds new Node containing data at head of the list.
         Takes O(1) time
         """
         new_node = Node(data)
@@ -41,8 +41,8 @@ class Linked_list:
 
     def search(self, key):
         """
-        Search for the first node containing data that matches the key
-        Returns the node or `None` if not found
+        Search for the first node containing data that matches the key.
+        Returns the node or `None` if not found.
         Takes O(n) time
         """
         current = self.head
@@ -56,9 +56,8 @@ class Linked_list:
 
     def insert(self, data, index):
         """
-        Inserts a new Node containing data at index position
-        Insertion takes O(1) time but finding node at insertion point takes
-        O(n) time.
+        Inserts a new Node containing data at index position.
+        Insertion takes O(1) time but finding node at insertion point takes O(n) time.
         Takes overall O(n) time.
         """
         if index == 0:
@@ -82,8 +81,8 @@ class Linked_list:
 
     def remove(self, key):
         """
-        Removes Node containing data that matches the key
-        Returns the node or `None` if key doesn't exist
+        Removes Node containing data that matches the key.
+        Returns the node or `None` if key doesn't exist.
         Takes O(n) time
         """
         current = self.head
