@@ -2,14 +2,7 @@ import random
 import sys
 
 # from load import load_numbers
-
-
-def load_numbers(file_name):
-    numbers = []
-    with open(file_name) as f:
-        for line in f:
-            numbers.append(int(line))
-    return numbers
+from load_numbers import load_numbers
 
 
 numbers = load_numbers(sys.argv[1])
