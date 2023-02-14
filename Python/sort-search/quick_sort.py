@@ -1,5 +1,5 @@
 import sys
-from load_numbers import load_numbers
+from load import load_numbers
 
 numbers = load_numbers(sys.argv[1])
 
