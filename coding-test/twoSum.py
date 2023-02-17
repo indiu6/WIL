@@ -33,6 +33,11 @@ def twoSumHashMap(nums, target):
         if complement in seen:
             return [seen[complement], i]
         else:
-            seen[v] = i  # seen[v] = v ?
+            seen[v] = i
 
     return False
+
+
+nums = [2, 7, 11, 15]
+target = 9
+print(twoSumHashMap(nums, target))
