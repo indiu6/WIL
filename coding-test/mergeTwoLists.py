@@ -17,6 +17,7 @@ class Solution:
         self, list1: Optional[ListNode], list2: Optional[ListNode]
     ) -> Optional[ListNode]:
         cur = dummy = ListNode()
+
         while list1 and list2:
             if list1.val < list2.val:
                 cur.next = list1
@@ -31,25 +32,29 @@ class Solution:
         return dummy.next
 
 
-class Solution:
-    def mergeTwoLists(
-        self, l1: Optional[ListNode], l2: Optional[ListNode]
-    ) -> Optional[ListNode]:
-        dummy = ListNode()
-        tail = dummy
+def mergeTwoLists1(
+    l1: Optional[ListNode], l2: Optional[ListNode]
+) -> Optional[ListNode]:
+    dummy = ListNode()
+    tail = dummy
 
-        while l1 and l2:  # until both are not null
-            if l1.val < l2.val:
-                tail.next = l1
-                l1 = l1.next
-            else:
-                tail.next = l2
-                l2 = l2.next
-            tail = tail.next
-
-        if l1:
+    while l1 and l2:  # until both are not null
+        if l1.val < l2.val:
             tail.next = l1
-        elif l2:
+            l1 = l1.next
+        else:
             tail.next = l2
+            l2 = l2.next
+        tail = tail.next
 
-        return dummy.next
+    if l1:
+        tail.next = l1
+    elif l2:
+        tail.next = l2
+
+    return dummy.next
+
+
+list1 = [1, 2, 4]
+list2 = [1, 3, 4]
+print(mergeTwoLists1(list1, list2))
