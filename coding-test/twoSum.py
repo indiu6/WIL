@@ -58,6 +58,17 @@ def twoSumNew(nums: list[int], target: int) -> list[int]:
         hashmap[nums[i]] = i
 
 
+# A simple implementation uses two iterations. In the first iteration, we add each element's value as a key and its index as a value to the hash table. Then, in the second iteration, we check if each element's complement (target−nums[i]target - nums[i]target−nums[i]) exists in the hash table. If it does exist, we return current element's index and its complement's index. Beware that the complement must not be nums[i]nums[i]nums[i] itself!
+def twoSum2iteration(nums: list[int], target: int) -> list[int]:
+    hashmap = {}
+    for i in range(len(nums)):
+        hashmap[nums[i]] = i
+    for i in range(len(nums)):
+        complement = target - nums[i]
+        if complement in hashmap and hashmap[complement] != i:
+            return [i, hashmap[complement]]
+
+
 nums = [2, 7, 11, 15]
 target = 9
 print(twoSumNew(nums, target))
