@@ -1,6 +1,6 @@
 def isValid(s: str) -> bool:
     stack = []
-    closeToOpen = {")": "(", "}": "{", "]": "["}
+    closeToOpen = {"(": ")", "{": "}", "[": "]"}
 
     for c in s:
         if c in closeToOpen:  # means it's closing one
