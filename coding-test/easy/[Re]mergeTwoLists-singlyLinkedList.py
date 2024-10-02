@@ -34,6 +34,10 @@ class Solution:
         return dummy.next
 
 
+# - Time Complexity: O(n+m)
+#   n = no of nodes in list1
+#   m = no of nodes in list2
+# - Memory Complexity: O(1)
 def mergeTwoLists1(
     l1: Optional[ListNode], l2: Optional[ListNode]
 ) -> Optional[ListNode]:
@@ -41,7 +45,7 @@ def mergeTwoLists1(
     tail = dummy
 
     while l1 and l2:  # until both are not null
-        if l1.val < l2.val:
+        if l1.val <= l2.val:
             tail.next = l1
             l1 = l1.next
         else:
