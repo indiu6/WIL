@@ -1,5 +1,6 @@
 from typing import Optional
 
+
 # Definition for singly-linked list.
 class ListNode:
     def __init__(self, val=0, next=None):
@@ -9,6 +10,7 @@ class ListNode:
 
 # For simplicity, we create a dummy node to which we attach nodes from lists.
 # We iterate over lists using two-pointers and build up a resulting list so that values are monotonically increased.
+
 
 # Time: O(n)
 # Space: O(1)
