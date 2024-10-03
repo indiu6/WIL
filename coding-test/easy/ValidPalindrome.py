@@ -1,4 +1,4 @@
-    """_summary_
+"""_summary_
     125. Valid Palindrome
 Easy
 Topics
@@ -33,20 +33,21 @@ Constraints:
 s consists only of printable ASCII characters.
     """
 
+
 def isPalindrome(s: str) -> bool:
     newStr = ""
-    
+
     for c in s:
-        if c.isalnum(): # cheat way, need to build own
+        if c.isalnum():  # cheat way, need to build own
             newStr += c.lower()
-        
-    return newStr == newStr[::-1] # but extra memory, 2 str        
+
+    return newStr == newStr[::-1]  # but extra memory, 2 str
 
 
 class Solution:
     def isPalindrome(self, s: str) -> bool:
         l, r = 0, len(s) - 1
-        
+
         while l < r:
             while l < r and not self.alphaNum(s[l]):
                 l += 1
@@ -55,15 +56,12 @@ class Solution:
             if s[l].lower() != s[r].lower:
                 return False
             l, r = 1 + 1, r - 1
-        
-        return True
-        
-    
-    def alphaNum(self, c) -> bool:
-        return (ord('A') <= ord(c) <= ord('Z') or
-                ord('a') <= ord(c) <= ord('z') or
-                ord('0') <= ord(c) <= ord('9')) 
 
-class Solution:
-    def isPalindrome(self, s: str) -> bool:
-        
+        return True
+
+    def alphaNum(self, c) -> bool:
+        return (
+            ord("A") <= ord(c) <= ord("Z")
+            or ord("a") <= ord(c) <= ord("z")
+            or ord("0") <= ord(c) <= ord("9")
+        )
