@@ -32,4 +32,4 @@ class Solution:
         return sorted(s) == sorted(t)
 
 
-# Sort ? T is N2 or N log N or N or 1
+# Sort ? T is N^2 or N log N or N or 1

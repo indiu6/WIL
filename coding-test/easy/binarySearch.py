@@ -1,6 +1,7 @@
 # You must write an algorithm with O(log n) runtime complexity.
 # Binary Search works only in sorted array.
 
+
 # Space: O(1)
 class Solution:
     def search(self, nums: list[int], target: int) -> int:
@@ -18,3 +19,9 @@ class Solution:
                 right = mid - 1
 
         return -1
+
+
+"""
+NC - 2 pointers
+
+"""
