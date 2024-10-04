@@ -1,3 +1,6 @@
+from typing import Counter
+
+
 # Time: O(N)
 # Space: O(1)
 class Solution:
@@ -5,7 +8,7 @@ class Solution:
         if len(s) != len(t):
             return False
 
-        dic = {}
+        dic = {}  # hashmap
 
         for char in s:
             if char not in dic:
@@ -20,3 +23,13 @@ class Solution:
                 dic[char] -= 1
 
         return True
+
+    def isAnagram(self, s: str, t: str) -> bool:
+        return Counter(s) == Counter(t)
+
+    # but this is not more efficient than above 2
+    def isAnagram(self, s: str, t: str) -> bool:
+        return sorted(s) == sorted(t)
+
+
+# Sort ? T is N2 or N log N or N or 1
