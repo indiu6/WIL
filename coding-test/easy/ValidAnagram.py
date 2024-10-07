@@ -24,11 +24,11 @@ class Solution:
 
         return True
 
-    def isAnagram(self, s: str, t: str) -> bool:
+    def isAnagram2(self, s: str, t: str) -> bool:
         return Counter(s) == Counter(t)
 
     # but this is not more efficient than above 2
-    def isAnagram(self, s: str, t: str) -> bool:
+    def isAnagram3(self, s: str, t: str) -> bool:
         return sorted(s) == sorted(t)
 
 

@@ -8,6 +8,14 @@ class TreeNode:
         self.left = left
         self.right = right
 
+class Solution:
+    def isBalanced(self, root: Optional[TreeNode]) -> bool:
+        
+
+
+
+
+
 
 # Intuition
 # Using DFS(depth-first search) we can solve this.
@@ -20,15 +28,17 @@ class TreeNode:
 # now else all of above cases return 1 + max(left, right), because indicating maxdepth till now no matter left or right.
 # now if returned answer is > 0 then return true else false.
 
+
 # Complexity
 # Time complexity: O(N)
 # Space complexity: O(1)
+
 class Solution:
     def isBalanced(self, root: Optional[TreeNode]) -> bool:
         R = root
 
         def helper(curr=root):
-            if curr == None:
+            if curr is None:
                 return 0
             else:
                 left = helper(curr.left)
@@ -42,7 +52,7 @@ class Solution:
         return helper() >= 0
 
 
-class Solution:
+class Solution2:
     def isBalanced(self, root: Optional[TreeNode]) -> bool:
         return self.Height(root) >= 0
 
@@ -62,7 +72,7 @@ class Solution:
 # this is not the Solution, not height-balanced!
 
 
-class Solution:
+class Solution3:
     def isBalanced(self, root: Optional[TreeNode]) -> bool:
         if root is None:
             return True
