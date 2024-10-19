@@ -1,6 +1,9 @@
 # Definition for a binary tree node.
 from typing import Optional
 
+# Input: root = [3,9,20,null,null,15,7]
+# Output: true
+
 
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
@@ -8,13 +11,9 @@ class TreeNode:
         self.left = left
         self.right = right
 
-class Solution:
-    def isBalanced(self, root: Optional[TreeNode]) -> bool:
-        
 
-
-
-
+# class Solution:
+#     def isBalanced(self, root: Optional[TreeNode]) -> bool:
 
 
 # Intuition
@@ -24,14 +23,15 @@ class Solution:
 # first check if node is None then return 0, because None node is balanced.
 # if not then get count of left or right subtree.
 # now if abs(right - left) > 1 then it's not balanced tree, then return -1
-# if any of left or right height is -1 then we already found imbance in tree, so return -1.
-# now else all of above cases return 1 + max(left, right), because indicating maxdepth till now no matter left or right.
+# if any of left or right height is -1 then we already found imbalance in tree, so return -1.
+# now else all of above cases return 1 + max(left, right), because indicating max depth till now no matter left or right.
 # now if returned answer is > 0 then return true else false.
 
 
 # Complexity
 # Time complexity: O(N)
 # Space complexity: O(1)
+
 
 class Solution:
     def isBalanced(self, root: Optional[TreeNode]) -> bool:
