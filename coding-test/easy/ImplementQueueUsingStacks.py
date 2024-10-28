@@ -1,5 +1,6 @@
 # Implement the MyQueue class:
 
+
 # void push(int x) Pushes element x to the back of the queue.
 # int pop() Removes the element from the front of the queue and returns it.
 # int peek() Returns the element at the front of the queue.
@@ -15,7 +16,9 @@ class MyQueue:
 
     # Remove the element from the front of the queue and returns it...
     def pop(self) -> int:
-        self.peek()
+        if not self.out_stk:
+            while self.in_stk:
+                self.out_stk.append(self.in_stk.pop())
         return self.out_stk.pop()
 
     # Get the front element...
@@ -23,7 +26,7 @@ class MyQueue:
         if not self.out_stk:
             while self.in_stk:
                 self.out_stk.append(self.in_stk.pop())
-        return self.out_stk[-1]
+        return self.out_stk[-1]  # -1 is last index
 
     # Return whether the queue is empty...
     def empty(self) -> bool:
