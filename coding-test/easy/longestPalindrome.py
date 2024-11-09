@@ -1,3 +1,24 @@
+from collections import defaultdict
+
+
+class Solution3:
+    def longestPalindrome(self, s: str) -> int:
+        count = defaultdict(int)
+        res = 0
+
+        for c in s:
+            count[c] += 1
+            if count[c] % 2 == 0:
+                res += 2
+
+        for cnt in count.values():
+            if cnt % 2:
+                res += 1
+                break
+
+        return res
+
+
 """
 Approach for this Problem:
 
@@ -11,6 +32,7 @@ If oddCount is greater than 1, return s.length() - oddCount + 1, which is the ma
 
 If oddCount is not greater than 1, return s.length(), which is the length of the original string, as all characters can be used to form a palindrome.
 """
+
 
 # Time complexity: O(n), where n is the length of the string s. This is because we are iterating through the string only once.
 # Space complexity: O(m), where m is the number of unique characters in the string. This is because we are using an unordered map to store the count of each character.
@@ -51,7 +73,7 @@ Space complexity: O(1), since the only extra storage we use is the counter for p
 """
 
 
-class Solution:
+class Solution2:
     def longestPalindrome(self, s: str) -> int:
         singles = set()
         length = 0
