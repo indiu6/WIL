@@ -8,6 +8,7 @@ class ListNode:
         self.next = next
 
 
+# Iterative way
 # Time complexity: O(N)
 # Space complexity: O(1)
 class Solution:
@@ -16,9 +17,9 @@ class Solution:
         current = head
 
         while current:
-            temp = current.next
-            current.next = prev
-            prev = current
-            current = temp
+            temp = current.next  # t = 2, 3
+            current.next = prev  # = N, 1
+            prev = current  # p = 1, 2
+            current = temp  # c = 2, 3
 
         return prev
