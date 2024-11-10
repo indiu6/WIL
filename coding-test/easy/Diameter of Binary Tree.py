@@ -9,6 +9,30 @@ class TreeNode:
         self.right = right
 
 
+# Depth-First Search (DFS)
+# is a fundamental algorithm used to traverse or search through tree or graph data structures. Starting from a designated root node, DFS explores as far down a branch as possible before backtracking, ensuring that all nodes and edges are visited systematically.
+class Solution2:
+    def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
+        max_diameter = [0]  # use it as a global var
+
+        def height(root):
+            if root is None:
+                return 0
+
+            left_height = height(root.left)
+            right_height = height(root.right)
+            diameter = left_height + right_height
+
+            max_diameter[0] = max(max_diameter, diameter)
+
+            return 1 + max(left_height, right_height)
+
+        height(root)
+        return max_diameter[0]
+
+    # time O(n), space O(h) h is a number of nodes in the tree
+
+
 class Solution:
     def __init__(self):
         self.diameter = 0  # stores the maximum diameter calculated
