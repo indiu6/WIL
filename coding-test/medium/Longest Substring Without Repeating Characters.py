@@ -4,10 +4,9 @@ class Solution:
         left = 0
         longest = 0
         sett = set()
-        n = len(s)
 
         # O(n), time n space
-        for r in range(n):
+        for r in range(len(s)):
             while s[r] in sett:
                 sett.remove(s[left])
                 left += 1
