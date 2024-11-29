@@ -19,7 +19,7 @@ const findDuplicates = (nums) => {
 }
 
 // 입력:
-nums = [4, 3, 2, 7, 8, 2, 3, 1]
+let nums = [4, 3, 2, 7, 8, 2, 3, 1]
 // 출력:
 // [2, 3]
 console.log('dup :>> ', findDuplicates(nums))
