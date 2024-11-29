@@ -26,6 +26,8 @@ console.log(isValid("(]")); // false
 console.log(isValid("([)]")); // false
 console.log(isValid("{[]}")); // true
 
+// 총 시간 복잡도: O(n), 총 공간 복잡도: O(n)
+
 // 문제: 유효한 괄호 (Valid Parentheses)
 // 설명:
 // 주어진 문자열이 유효한 괄호 문자열인지 확인하는 함수를 작성하시오.
