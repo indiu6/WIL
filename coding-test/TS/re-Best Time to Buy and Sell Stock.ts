@@ -1,18 +1,21 @@
-const maxProfit = (nums: number[]) => {
-    let profit = 0
-    let minProfit = Infinity
+const maxProfit = (prices: number[]): number => {
+    if (prices.length <= 1) return 0; // 조기 반환 조건
 
-    if (nums.length < 2) return 0
+    let maxProfit = 0
+    // let minPrice = Infinity
+    let minPrice = Number.POSITIVE_INFINITY
 
-    for (const num of nums) {
-        if (num < minProfit) {
-            minProfit = num
+    // if (prices.length < 2) return 0
+
+    for (const num of prices) {
+        if (num < minPrice) {
+            minPrice = num
         } else {
-            profit = Math.max(profit, num - minProfit)
+            maxProfit = Math.max(maxProfit, num - minPrice)
         }
     }
 
-    return profit
+    return maxProfit
 }
 
 console.log(maxProfit([7, 1, 5, 3, 6, 4])); // 5
