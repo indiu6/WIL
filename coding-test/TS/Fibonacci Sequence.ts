@@ -28,7 +28,6 @@ const fibonacciIterative = (num: number) => {
         a = b // 1 > 
         b = temp // 1 > 3
     }
-
     return b
 
 }
