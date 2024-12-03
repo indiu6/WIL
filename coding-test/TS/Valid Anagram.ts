@@ -4,7 +4,7 @@ const isAnagramMap = (s: string, t: string) => {
 
     // hashmap
     let stringMap: Record<string, number> = {}
-    const charCount: { [key: string]: number } = {};
+    // const charCount: { [key: string]: number } = {};
 
     for (const c of s) {
         stringMap[c] = (stringMap[c] || 0) + 1

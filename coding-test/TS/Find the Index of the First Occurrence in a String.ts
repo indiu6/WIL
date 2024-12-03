@@ -12,7 +12,6 @@ const strStr = (haystack: string, needle: string) => {
     const haystackLen = haystack.length
 
     for (let i = 0; i < haystackLen - needleLen; i++) {
-        const element = haystack[i];
         if (haystack.substring(i, needleLen + i) === needle) {
             return i
         }
