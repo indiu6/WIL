@@ -29,7 +29,6 @@ const fibonacciIterative = (num: number) => {
         b = temp // 1 > 3
     }
     return b
-
 }
 
 console.log(fibonacciIterative(0)); // 0
