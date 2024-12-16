@@ -4,9 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 
-class Program
+
+public class PalindromeChecker
 {
-    static bool IsPalindrome(string s)
+    public static bool IsPalindrome(string s)
     {
         // 알파벳과 숫자만 남기고 소문자로 변환
         string cleaned = Regex.Replace(s, "[^a-zA-Z0-9]", "").ToLower();
@@ -20,7 +21,7 @@ class Program
         return cleaned == reversed;
     }
 
-    static void Main()
+    public static void Main(string[] args)
     {
         // 테스트
         Console.WriteLine(IsPalindrome("A man, a plan, a canal: Panama")); // true

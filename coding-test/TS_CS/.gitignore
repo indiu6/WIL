@@ -1,1 +1,8 @@
 Subarray Sum.ts
+
+.vscode
+ConsoleApp1/bin
+ConsoleApp1/obj
+ConsoleApp1/ConsoleApp1.csproj
+ConsoleApp1/program.cs
+ConsoleApp1.sln
