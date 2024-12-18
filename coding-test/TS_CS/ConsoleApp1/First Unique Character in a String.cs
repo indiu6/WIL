@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-public class Solution {
+public class Solution1 {
     public int FirstUniqChar(string s) {
         Dictionary<char, int> charCount = new Dictionary<char, int>();
 
@@ -29,7 +29,7 @@ public class Solution {
 // 테스트
 public class Program1 {
     public static void Main() {
-        Solution solution = new Solution();
+        Solution1 solution = new Solution1();
         Console.WriteLine(solution.FirstUniqChar("leetcode")); // 출력: 0
         Console.WriteLine(solution.FirstUniqChar("loveleetcode")); // 출력: 2
         Console.WriteLine(solution.FirstUniqChar("aabb")); // 출력: -1
